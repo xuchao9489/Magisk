@@ -63,10 +63,17 @@ void su_daemon(int pid);
 void revert_unmount(int pid = -1);
 //void cleanup_preload();
 void do_check_pid(int client);
+void do_check_fork(int pid);
 
 //Event
 void disable_monitor();
 void enable_monitor();
+
+// Process monitoring
+extern pthread_t monitor_thread;
+void proc_monitor();
+int new_daemon_thread(void(*entry)());
+void rescan_apps();
 
 
 extern std::atomic<bool> denylist_enforced;
