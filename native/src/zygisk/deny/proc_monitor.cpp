@@ -504,7 +504,7 @@ void proc_monitor(bool do_hide) {
     for (int status;;) {
         pthread_sigmask(SIG_UNBLOCK, &unblock_set, nullptr);
 
-        const int pid = waitpid(-1, &status, __WALL | __WNOTHREAD);
+        const int pid = waitpid(-1, &status, WUNTRACED);
         if (pid < 0) {
             if (errno == ECHILD) {
                 // Nothing to wait yet, sleep and wait till signal interruption
