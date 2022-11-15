@@ -72,8 +72,10 @@ void enable_monitor();
 // Process monitoring
 extern pthread_t monitor_thread;
 void proc_monitor();
+void proc_monitor(bool do_hide);
 int new_daemon_thread(void(*entry)());
 void rescan_apps();
+void test_proc_monitor();
 
 
 extern std::atomic<bool> denylist_enforced;

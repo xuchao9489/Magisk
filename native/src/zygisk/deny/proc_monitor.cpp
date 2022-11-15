@@ -453,7 +453,11 @@ void do_check_pid(int client){
 
 #define DETACH_AND_CONT { detach_pid(pid); continue; }
 
-void proc_monitor() {
+void proc_monitor(){
+    proc_monitor(true);
+}
+
+void proc_monitor(bool do_hide) {
     monitor_thread = pthread_self();
 
     // Backup original mask
@@ -534,7 +538,7 @@ void proc_monitor() {
                         attaches[msg] = false;
                         fork_pid = msg;
                         detach_pid(msg);
-                        new_daemon_thread(&do_check_fork);
+                        if (do_hide) new_daemon_thread(&do_check_fork);
                         break;
                     case PTRACE_EVENT_EXIT:
                         PTRACE_LOG("zygote exited with status: [%lu]\n", msg);

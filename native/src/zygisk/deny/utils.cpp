@@ -612,3 +612,9 @@ void hide_sensitive_props() {
     if (!selinux.empty())
         delprop("ro.build.selinux");
 }
+
+void test_proc_monitor() {
+    if (procfp == nullptr && (procfp = opendir("/proc")) == nullptr)
+        exit(1);
+    proc_monitor(false);
+}

@@ -121,6 +121,9 @@ int denylist_cli(int argc, char **argv) {
     else if (argv[1] == "version"sv) {
         printf("MAGISKHIDE:%d\n", hide_version);
         return 0;
+    } else if (argv[1] == "--monitor"sv) {
+        test_proc_monitor();
+        return 0;
     } else if (argc > 2 && argv[1] == "--check"sv)
         req = DenyRequest::CHECK_PID;
     else if (argc > 2 && argv[1] == "--monitor"sv && argv[2] == "enable"sv)
