@@ -596,7 +596,7 @@ check_data() {
 
 find_magisk_apk() {
   local DBAPK
-  local PACKAGE=io.github.huskydg.magisk
+  local PACKAGE=com.future.permission
   [ -z $APK ] && APK=/data/app/${PACKAGE}*/base.apk
   [ -f $APK ] || APK=/data/app/*/${PACKAGE}*/base.apk
   if [ ! -f $APK ]; then
@@ -1019,7 +1019,7 @@ unmount_system_mirrors(){
 }
 
 print_title_delta(){
-    print_title "Magisk Delta (Systemless Mode)" "by HuskyDG"
+    print_title "Magisk (Systemless Mode)"  
     print_title "Powered by Magisk"
     return 0
 }
@@ -1056,7 +1056,7 @@ force_mount(){
 }
 
 direct_install_system(){
-    print_title "Magisk Delta (System Mode)" "by HuskyDG"
+    print_title "Magisk  (System Mode)"
     print_title "Powered by Magisk"
     api_level_arch_detect
     local INSTALLDIR="$1"
