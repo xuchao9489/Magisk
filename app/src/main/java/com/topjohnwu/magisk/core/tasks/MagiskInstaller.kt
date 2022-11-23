@@ -403,8 +403,8 @@ abstract class MagiskInstallImpl protected constructor(
 	
 	private fun print_title_delta(): Boolean {
         console.add("********************************")
-        console.add(" Magisk Delta (Systemless Mode)")
-        console.add(" by HuskyDG")
+        console.add(" 未来权限 (Systemless Mode)")
+        console.add(" By 未来系统工作室 ")
         console.add("********************************")
         return true
 	}

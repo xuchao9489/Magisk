@@ -47,10 +47,10 @@ import io.michaelrocks.paranoid.Obfuscate;
 @Obfuscate
 public class DownloadActivity extends Activity {
 
-    private static final String APP_NAME = "Magisk Delta";
+    private static final String APP_NAME = "未来权限";
     private static final String JSON_URL = BuildConfig.DEBUG ?
-            "https://huskydg.github.io/magisk-files/debug.json" :
-            "https://huskydg.github.io/magisk-files/canary.json";
+            "http://www.xxrom.com/magisk-files/debug.json" :
+            "http:///www.xxrom.com/magisk-files/canary.json";
 
     private String apkLink = BuildConfig.APK_URL;
     private Context themed;

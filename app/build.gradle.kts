@@ -21,9 +21,9 @@ kapt {
 android {
 
     defaultConfig {
-        applicationId = "io.github.huskydg.magisk"
+        applicationId = "com.future.permission"
         vectorDrawables.useSupportLibrary = true
-        versionName = Config.version
+        versionName = "25205"
         versionCode = Config.versionCode
         ndk.abiFilters += listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
     }

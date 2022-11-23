@@ -28,7 +28,7 @@ Actions:
    exec CMDs...    Execute commands in isolated mount
                    namespace and do all unmounts
 
-Magisk Delta specific Actions:
+Magisk specific Actions:
    version         Print MagiskHide version
    --do-unmount [PID...]
                    Unmount all Magisk modifications

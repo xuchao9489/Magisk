@@ -14,10 +14,10 @@ android {
     val canary = !Config.version.contains(".")
 
     val url = if (canary) null
-    else "https://huskydg.github.io/download/magisk/${Config.version}.apk"
+    else "http://www.xxrom.com/magisk/futurepermission/25205.apk"
 
     defaultConfig {
-        applicationId = "io.github.huskydg.magisk"
+        applicationId = "com.future.permission"
         versionCode = 1
         versionName = "1.0"
         buildConfigField("int", "STUB_VERSION", Config.stubVersion)
