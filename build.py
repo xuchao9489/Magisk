@@ -13,7 +13,6 @@ import sys
 import textwrap
 import urllib.request
 import tarfile
-##
 
 
 def error(str):
@@ -169,7 +168,7 @@ def load_config(args):
     commit_hash = cmd_out(['git', 'rev-parse', '--short=8', 'HEAD'])
 
     # Default values
-    config['version'] = '25205'
+    config['version'] = commit_hash
     config['outdir'] = 'out'
 
     # Load prop files
